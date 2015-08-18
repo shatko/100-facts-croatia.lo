@@ -9,6 +9,7 @@
     <title>100-facts-croatia</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/half-slider.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -53,47 +54,47 @@
     </nav>
 
     <!-- Half Page Image Background Carousel Header -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-        </ol>
-
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="/img/dalmatiner.jpg" alt="Dalmatiner">
-                <div class="carousel-caption">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, voluptatum id. Aperiam debitis reiciendis ex minus hic maxime, ducimus architecto, nisi facere ipsa quae, explicabo accusamus, necessitatibus commodi iste ad?</h2>
-                </div>
-            </div>
-            <div class="item">
-                <img src="/img/kravata.jpg" alt="Kravata">
-                <div class="carousel-caption">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa, similique provident consequatur asperiores nam aliquid facere voluptatibus suscipit obcaecati sapiente natus modi quod, totam quidem! Enim numquam doloremque, temporibus!</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+    <header>
 
     </header>
 
     <!-- Page Content -->
     <div class="container">
+        <div id="myCarousel" class="carousel slide">
+                <!-- Wrapper for Slides -->
+            <div class="carousel-inner">
+                <div class="item active row">
+                    <div class="col-md-6 imgholder">
+                        <img src="/img/dalmatiner.jpg" alt="Dalmatiner">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, voluptatum id. Aperiam debitis reiciendis ex minus hic maxime, ducimus architecto, nisi facere ipsa quae, explicabo accusamus, necessitatibus commodi iste ad?</h2>
+                    </div>
+                </div>
+                <div class="item row">
+                    <div class="col-md-6 imgholder">
+                        <img src="/img/kravata.jpg" alt="Kravata">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa, similique provident consequatur asperiores nam aliquid facere voluptatibus suscipit obcaecati sapiente natus modi quod, totam quidem! Enim numquam doloremque, temporibus!</h2>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Footer -->
-        <footer>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
 
-        </footer>
+            <!-- Footer -->
+            <footer>
 
+            </footer>
+
+        </div>
     </div>
     <!-- /.container -->
 
