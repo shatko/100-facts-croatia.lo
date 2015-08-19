@@ -4,10 +4,13 @@ header {
 	text-align: center;
 	color: red;
 }
+.desno {
+	font-size: 9px;
+}
 .small_header {
 	color: gray;
 }
-.container {
+.container{
 	padding: 5%;
 	border: solid red;
 	border-width: 10px;
@@ -20,4 +23,8 @@ img {
 }
 a {
 	text-align: center;
+}
+.btn {
+	float: right;
+	color: red;
 }
