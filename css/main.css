@@ -1,17 +1,23 @@
 header {
 	padding-top: 30px;
+	padding-bottom: 5px;
+	text-align: center;
+	color: red;
 }
-img {
-	max-width:100%; 
-	max-height:100%;
-	margin:auto;
-	display:block;
+.small_header {
+	color: gray;
 }
 .container {
+	padding: 5%;
 	border: solid red;
+	border-width: 10px;
 }
-.btn {
-	float: right;
+img {
+	max-width: 100%; 
+	max-height: 100%;
+	margin: auto;
+	display: block;
 }
-
-/* keeps navbar collapsed */
+a {
+	text-align: center;
+}
