@@ -10,8 +10,9 @@
       include ('connect.php');
 
       // gets data
+      $selector = 2;
 
-      $query = "SELECT * FROM `crofacts`";
+      $query = "SELECT * FROM crofacts WHERE croid = $selector";
       if ($is_query_running = mysql_query($query)) {
         echo "query running !!".'<br>';
       }
@@ -19,7 +20,7 @@
         echo "query NOT running !!";
       }
       while ($query_execute = mysql_fetch_assoc($is_query_running)){
-        echo '<img src = "'.$query_execute['croimages'].'"'.'<br>';
+        echo '<img src = "'.$query_execute['croimages'].'"'.'<br>'.$query_execute['croexplained'];
       }
 
     ?>
