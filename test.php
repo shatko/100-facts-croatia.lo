@@ -2,21 +2,26 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Increment count when button is clicked</title>
+    <title>TEST</title>
   </head>
-
   <body>
-    <input type="button" value="Count" id="countButton" />
+    <?php
 
+      include ('connect.php');
 
-    <script type="text/javascript">
-      var count = 0;
-      var button = document.getElementById("countButton");
-      button.onclick = function(){
-        count++;   
-        console.log(count);
+      // gets data
+
+      $query = "SELECT * FROM `crofacts`";
+      if ($is_query_running = mysql_query($query)) {
+        echo "query running !!".'<br>';
+      }
+      else {
+        echo "query NOT running !!";
+      }
+      while ($query_execute = mysql_fetch_assoc($is_query_running)){
+        echo '<img src = "'.$query_execute['croimages'].'"'.'<br>';
       }
 
-    </script>
+    ?>
   </body>
 </html>
