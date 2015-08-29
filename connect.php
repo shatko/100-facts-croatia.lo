@@ -8,12 +8,15 @@
   $dbname = "mladen";
   $dberror1 = "Not connected to a DB";
 
-  $conn =mysql_connect($dbhost, $dbuser, $dbpass, $dbname) or die($dberror1);
+  $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
-  if ($conn == true) {
-    echo "Connection to a DB is OK!";
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  } 
+
+  if (!$conn->set_charset("utf8")) {
+      printf("Error loading character set utf8: %s\n", $conn->error);
+  } else {
+      //printf("Current character set: %s\n", $conn->character_set_name());
   }
-
-  $select_db =mysql_select_db('mladen') or die ("   Database not selected!");
-
 ?>
