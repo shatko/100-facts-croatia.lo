@@ -16,6 +16,9 @@ img {
 	max-width: 100%; 
 	max-height: 100%;
 }
+.container {
+	padding-bottom: 50px;
+}
 a {
 	text-align: center;
 	text-decoration: none;
@@ -43,4 +46,21 @@ a {
 	color: #ffffff;
   	background: #ff1f1f;
   	text-decoration: none;
+}
+footer {
+	background-color: #FF4136;
+	text-align: center;
+	padding: 25px;
+}
+.text-white{
+	color: #ffffff;
+	padding-top: 100px;
+}
+.twitterlogo {
+	background-image: url('/img/social/twitter.png');
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
