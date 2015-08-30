@@ -1,4 +1,16 @@
-<script type="text/javascript"> 
+<script type="text/javascript">
+
+window.addEventListener("keydown", goNext, false); 
+function goNext(e) {
+
+    switch(e.keyCode) {
+        case 39:
+            var buttonNext = document.getElementById('button-next');
+            document.location.href = buttonNext.href;
+            break;
+    }   
+}
+
 </script>
 
 
@@ -65,7 +77,7 @@
             </div>
             <p> Želim znati više: <a class="link" href="<?php echo $display_link;?>" target=_blank>link!</a></p>
             <div class="buttons-container">
-                <a class="buttons" href="?fact=<?php echo getNextFactId($factId, $factIdMax); ?>">next</a>
+                <a id="button-next" class="buttons" href="?fact=<?php echo getNextFactId($factId, $factIdMax); ?>">next</a>
                 <a class="buttons" href="?fact=<?php echo getRandomFactId($factIdMin, $factIdMax); ?>">random</a>
             </div>
         </div>

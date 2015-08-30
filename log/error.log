@@ -2514,3 +2514,15 @@
 [Sat Aug 29 16:50:27.083318 2015] [:error] [pid 3055] [client 127.0.0.1:59152] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 14
 [Sat Aug 29 16:50:28.236761 2015] [:error] [pid 1318] [client 127.0.0.1:59154] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 14
 [Sat Aug 29 16:52:18.412139 2015] [:error] [pid 3054] [client 127.0.0.1:59168] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 14
+[Sun Aug 30 12:46:07.493482 2015] [:error] [pid 2949] [client 127.0.0.1:37194] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 28
+[Sun Aug 30 12:46:07.912226 2015] [:error] [pid 2949] [client 127.0.0.1:37194] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 28
+[Sun Aug 30 12:46:49.562407 2015] [:error] [pid 1200] [client 127.0.0.1:37200] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 27
+[Sun Aug 30 12:46:54.663521 2015] [:error] [pid 2828] [client 127.0.0.1:37202] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 27
+[Sun Aug 30 12:47:00.140947 2015] [:error] [pid 1202] [client 127.0.0.1:37209] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 27
+[Sun Aug 30 12:49:03.746316 2015] [:error] [pid 3602] [client 127.0.0.1:37234] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 27
+[Sun Aug 30 12:52:39.854523 2015] [:error] [pid 2819] [client 127.0.0.1:37239] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 27
+[Sun Aug 30 12:54:44.868647 2015] [:error] [pid 2949] [client 127.0.0.1:37243] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 27
+[Sun Aug 30 12:59:12.250840 2015] [:error] [pid 1199] [client 127.0.0.1:37261] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 28
+[Sun Aug 30 12:59:47.773618 2015] [:error] [pid 1201] [client 127.0.0.1:37269] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 28
+[Sun Aug 30 13:00:25.222838 2015] [:error] [pid 2828] [client 127.0.0.1:37273] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 28
+[Sun Aug 30 13:01:18.927239 2015] [:error] [pid 1200] [client 127.0.0.1:37278] PHP Notice:  Undefined index: fact in /home/mladen/Desktop/practice/100-facts-croatia.lo/templates/factslider.php on line 26
