@@ -21,7 +21,7 @@ function goNext(e) {
         $result1 = $conn->query($sql1);
         $factIdMin = 1;
         $factIdMax = $result1->num_rows;
-        $factId = $_GET['fact'];
+        $factId = isset($_GET['fact']);
         if ($factId == NULL) {
             $factId = rand($factIdMin,$factIdMax);
         }
