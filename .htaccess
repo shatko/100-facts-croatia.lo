@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "Admins only"
+# todo: change on deploy
+AuthUserFile /home/mladen/Desktop/practice/100-facts-croatia.lo/.htpasswd
+<Files "submit.php">
+	Require valid-user
+</Files>
