@@ -78,3 +78,7 @@ footer {
 .twitterlogo:hover {
 	color: #ffffff;
 }
+/* SUBMIT */
+.displayerrors {
+	color: red;
+}
