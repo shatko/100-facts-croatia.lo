@@ -22,19 +22,22 @@
 		$imagetype=$_FILES['file']['type'];
 		$tmp_name = $_FILES['file']['tmp_name'];
 		$imagelocation = 'img/';
-		$target_file = $imagelocation . basename($imagename);
 /* checks for the image errors */
 		if (empty($imagename)) {
 			$errors['imagename1'] = "** Insert picture!";
 		}
-		if (file_exists($imagename)) {
-    		$errors['imagename2'] = "** The image name already exists!";
-    	}
 /* connection to a database and send data if no errors */
 		if (count($errors) == 0) {
+/* randomize image name */
+			$length = 5;
+			$randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+			$ext = pathinfo($imagename, PATHINFO_EXTENSION);
+			$imagename2 = str_replace('.'.$ext, '', $imagename).'_crofact_'.$randomString.'.'.$ext;    
+			$target_file = $imagelocation . basename($imagename2);
+			var_dump($imagename2);
 /* image upload insert message*/
 			move_uploaded_file($tmp_name, $target_file);
-			$noerrors['noerrors1'] ="!!! New Face Added !!! :)";
+			$noerrors['noerrors1'] ="!!! New Fact Added !!! :)";
 /* database stuff */
 			$dbhost = "localhost";
 			$dbuser = "root";
@@ -46,7 +49,7 @@
 				die("Connection failed: " . $conn->connect_error);
 			} 
 			mysqli_select_db($conn, "mladen");
-			$sql = "INSERT INTO crofacts (croname,croexplained,crolink,croimages) VALUES ('$_POST[name]','$_POST[explained]','$_POST[link]','$imagename')";
+			$sql = "INSERT INTO crofacts (croname,croexplained,crolink,croimages) VALUES ('$_POST[name]','$_POST[explained]','$_POST[link]','$imagename2')";
 			mysqli_query($conn, $sql);
 			mysqli_close($conn);
 /* empty form */
