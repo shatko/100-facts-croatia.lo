@@ -1,5 +1,4 @@
 <script type="text/javascript">
-
 window.addEventListener("keydown", goNext, false); 
 function goNext(e) {
     switch(e.keyCode) {
@@ -21,8 +20,8 @@ function goNext(e) {
         $result1 = $conn->query($sql1);
         $factIdMin = 1;
         $factIdMax = $result1->num_rows;
-        $factId = isset($_GET['fact']);
-        if ($factId == NULL) {
+        $factId = isset($_GET['fact']) ? $_GET['fact'] : false;
+        if ($factId == false) {
             $factId = rand($factIdMin,$factIdMax);
         }
         $sql2 = "SELECT * FROM crofacts WHERE croid = $factId";
@@ -58,7 +57,7 @@ function goNext(e) {
         <div class="facts"> 
             <div class="row ">
                 <div class="col-md-6 imgholder">
-                    <img src="<?php echo $display_image; ?>" alt="">
+                    <img src="img/<?php echo $display_image; ?>" alt="">
                     <p></p>
                 </div>
                 <div class="col-md-6">
