@@ -34,7 +34,6 @@
 			$ext = pathinfo($imagename, PATHINFO_EXTENSION);
 			$imagename2 = str_replace('.'.$ext, '', $imagename).'_crofact_'.$randomString.'.'.$ext;    
 			$target_file = $imagelocation . basename($imagename2);
-			var_dump($imagename2);
 /* image upload insert message*/
 			move_uploaded_file($tmp_name, $target_file);
 			$noerrors['noerrors1'] ="!!! New Fact Added !!! :)";
@@ -57,6 +56,7 @@
 			unset($_POST['explained']);
 			unset($_POST['link']);
 			unset($imagename);
+			unset($imagename2)
 		}
 	}
 ?>
