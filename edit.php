@@ -3,6 +3,7 @@
 	$factId = isset($_GET['fact']) ? $_GET['fact'] : false;
 	$sql2 = "SELECT * FROM crofacts WHERE croid = $factId";
 	$result2 = $conn->query($sql2);
+
 	while ($row = $result2->fetch_assoc()) {
 		$display_name = $row['croname'];
 	    $display_image = $row['croimages'];
@@ -41,6 +42,8 @@
 			} 
 			mysqli_select_db($conn, $dbname);
 			$sql = "UPDATE crofacts SET croname='$_POST[name]', croexplained='$_POST[explained]', crolink='$_POST[link]' WHERE croid='$factId'";
+/* sets utf8 on input */
+			mysqli_query($conn, "SET NAMES utf8");
 			mysqli_query($conn, $sql);
 			mysqli_close($conn);
 		}
