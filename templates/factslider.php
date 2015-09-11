@@ -26,7 +26,7 @@
     if ($factId == false) {
         $factId = rand($factIdMin,$factIdMax);
     }
-/* sql2 references to the row by selected id*/
+/* sql2 references to the row by selected id */
     $sql2 = "SELECT * FROM crofacts WHERE croid = $factId";
     $result2 = $conn->query($sql2);
     while ($row = $result2->fetch_assoc()) {
