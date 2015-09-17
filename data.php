@@ -29,6 +29,13 @@
 			mysqli_select_db($conn, "mladen");
 			$sql = "SELECT * FROM crofacts";
 			$data = mysqli_query($conn, $sql);
+
+		// deletes a row
+			if(isset($_POST['delete'])) {	
+				$DeleteQuery = "DELETE FROM crofacts WHERE croid='$_POST[hidden]'";
+				mysqli_query($conn, $DeleteQuery);
+			}
+
 		// border 
 			echo "<table border=1>
 			<tr>
@@ -41,6 +48,7 @@
 			</tr>";
 		// display the content
 			while ($cell = mysqli_fetch_array($data)){
+				echo "<form action=data.php method=post>";
 				echo '<tr>';
 				echo '<td>'.$cell['croid'].'</td>';
 				echo '<td>'.$cell['croname']."</td>";
@@ -49,11 +57,12 @@
 				echo '<td>'.$cell['crolink'].'</td>';
 				echo '<td>'.$cell['croimages'].'</td>';
 				echo '<td><a href="edit.php?fact='.$cell['croid'].'">edit</a></td>';
+				echo "<td>" . '<input type=submit name=delete value=delete>' . "<td>";
+				echo "<td>" . '<input type=hidden name=hidden value=' . $cell['croid'] . '</td>';
 				echo '</tr>';
+				echo "</form>";
 			}
 			echo'</table>';
-		// close DB connection 
-			mysqli_close($conn);
 		?>
 	</table>
 </body>

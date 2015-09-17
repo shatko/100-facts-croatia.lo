@@ -47,7 +47,7 @@
 			mysqli_query($conn, $sql);
 			mysqli_close($conn);
 		}
-	}	
+	}
 ?>
 <html>
 	<html lang="hr">
