@@ -59,22 +59,43 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript">
+	tinymce.init({
+	    selector: "textarea",
+	    plugins: [
+	        "advlist autolink lists link image charmap print preview anchor",
+	        "searchreplace visualblocks code fullscreen",
+	        "insertdatetime media table contextmenu paste"
+	    ],
+	    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+	});
+	</script>
 </head>
 <body>
-	<form action="edit.php?fact=<?php echo $factId;?>" method="post" enctype="multipart/form-data">
-<!-- Insert the name of the fact -->
-		Name:		<input type="text" name="name" value="<?php echo $display_name ?>" /> 
-					</br>
-<!-- Insert the explaination of the fact -->
-		Explained: 	<textarea name="explained" rows="10" cols="100"><?php echo $display_explained; ?></textarea>
-					</br>
-<!-- Inserts the link for the want to know more area --> 
-		Link: 		<input type="text" name="link" value="<?php echo $display_link; ?>" />
-					</br>
-		<img src="img/<?php echo $display_image; ?>" alt="Smiley face" height="100px" width="100px">
-<!-- Submit button -->
+	<div class="container">
+	    <div class="facts"> 
+			<form action="edit.php?fact=<?php echo $factId;?>" method="post" enctype="multipart/form-data">
+	        	<div class="row">
+	        		<div class="col-md-6 imgholder">
+						<img src="img/<?php echo $display_image; ?>" alt="Smiley face" height="400px" width="550px">
+					</div>
+					<div class="col-md-6">
+				 		<textarea name="explained" rows="5" cols="50"><?php echo $display_explained; ?></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						Name:<input type="text" name="name" value="<?php echo $display_name ?>" /> 
+					</div>
+					<div class="col-md-6">
+						Link:<input type="text" name="link" value="<?php echo $display_link; ?>" />
+					</div>
+				</div>
+			</form>
+		</div>
 		<input type="submit" name="submit" value="submit">
-		</br></br>
+		</br>
 		<span class="displayerrors">
 			Alerts:</br>
 			<?php if(isset($errors['name1'])) echo $errors['name1']; ?></br>
@@ -82,6 +103,9 @@
 			<?php if(isset($errors['link1'])) echo $errors['link1']; ?></br>
 			<?php if(isset($noerrors['noerrors1'])) echo $noerrors['noerrors1']; ?></br>
 		</span>
-	</form>
+	</div>
+	<form method="post" action="somepage">
+    <textarea name="content" style="width:100%"></textarea>
+</form>
 </body>
 </html>
