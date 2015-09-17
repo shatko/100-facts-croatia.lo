@@ -61,7 +61,8 @@
 <!-- main container start -->
     <div class="container">
         <div class="facts"> 
-            <div class="row ">
+            <div class="row 
+            ">
 <!-- image area -->
                 <div class="col-md-6 imgholder">
                     <img src="img/<?php echo $display_image; ?>" alt="">
