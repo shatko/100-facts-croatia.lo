@@ -89,10 +89,10 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6">
-							Name:<input type="text" name="name" value="<?php echo $display_name ?>" /> 
+							Name:<input type="text" name="name" size="25" value="<?php echo $display_name ?>" /> 
 						</div>
 						<div class="col-md-6">
-							Link:<input type="text" name="link" value="<?php echo $display_link; ?>" />
+							Link:<input type="text" name="link" size="50" value="<?php echo $display_link; ?>" />
 						</div>
 					</div>
 				</div>
