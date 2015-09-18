@@ -9,6 +9,7 @@
 	    $display_image = $row['croimages'];
 	    $display_explained = $row['croexplained'];
 	    $display_link = $row['crolink'];
+	    $display_factid = $row['croid'];
 	}
 /* wraps everything inside */
 	if(isset($_POST['submit'])) {
@@ -46,6 +47,7 @@
 			mysqli_query($conn, "SET NAMES utf8");
 			mysqli_query($conn, $sql);
 			mysqli_close($conn);
+			header("Refresh:0");
 		}
 	}
 ?>
@@ -62,50 +64,48 @@
 	<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 	<script type="text/javascript">
 	tinymce.init({
-	    selector: "textarea",
-	    plugins: [
-	        "advlist autolink lists link image charmap print preview anchor",
-	        "searchreplace visualblocks code fullscreen",
-	        "insertdatetime media table contextmenu paste"
-	    ],
-	    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+	    selector: "#factexplained",
+        plugins: [
+                "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "table contextmenu directionality emoticons template textcolor paste fullpage textcolor colorpicker textpattern"
+        ],
+
+        toolbar1: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | insertdatetime preview | forecolor backcolor",
 	});
 	</script>
 </head>
-<body>
-	<div class="container">
-	    <div class="facts"> 
-			<form action="edit.php?fact=<?php echo $factId;?>" method="post" enctype="multipart/form-data">
-	        	<div class="row">
-	        		<div class="col-md-6 imgholder">
-						<img src="img/<?php echo $display_image; ?>" alt="Smiley face" height="400px" width="550px">
+	<body>
+		<form action="edit.php?fact=<?php echo $display_factid;?>" method="post" enctype="multipart/form-data">
+			<div class="container">
+			    <div class="facts"> 
+		        	<div class="row">
+		        		<div class="col-md-6 imgholder">
+							<img src="img/<?php echo $display_image; ?>" alt="Smiley face" height="400px" width="550px">
+						</div>
+						<div class="col-md-6">
+					 		<textarea id="factexplained" name="explained" rows="5" cols="50"><?php echo $display_explained; ?></textarea>
+						</div>
 					</div>
-					<div class="col-md-6">
-				 		<textarea name="explained" rows="5" cols="50"><?php echo $display_explained; ?></textarea>
+					<div class="row">
+						<div class="col-md-6">
+							Name:<input type="text" name="name" value="<?php echo $display_name ?>" /> 
+						</div>
+						<div class="col-md-6">
+							Link:<input type="text" name="link" value="<?php echo $display_link; ?>" />
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-6">
-						Name:<input type="text" name="name" value="<?php echo $display_name ?>" /> 
-					</div>
-					<div class="col-md-6">
-						Link:<input type="text" name="link" value="<?php echo $display_link; ?>" />
-					</div>
-				</div>
-			</form>
-		</div>
-		<input type="submit" name="submit" value="submit">
-		</br>
-		<span class="displayerrors">
-			Alerts:</br>
-			<?php if(isset($errors['name1'])) echo $errors['name1']; ?></br>
-			<?php if(isset($errors['explained1'])) echo $errors['explained1']; ?></br>
-			<?php if(isset($errors['link1'])) echo $errors['link1']; ?></br>
-			<?php if(isset($noerrors['noerrors1'])) echo $noerrors['noerrors1']; ?></br>
-		</span>
-	</div>
-	<form method="post" action="somepage">
-    <textarea name="content" style="width:100%"></textarea>
-</form>
-</body>
+				<input type="submit" name="submit" value="submit">
+				</br>
+				<span class="displayerrors">
+					Alerts:</br>
+					<?php if(isset($errors['name1'])) echo $errors['name1']; ?></br>
+					<?php if(isset($errors['explained1'])) echo $errors['explained1']; ?></br>
+					<?php if(isset($errors['link1'])) echo $errors['link1']; ?></br>
+					<?php if(isset($noerrors['noerrors1'])) echo $noerrors['noerrors1']; ?></br>
+				</span>
+			</div>
+		</form>
+	</body>
 </html>
