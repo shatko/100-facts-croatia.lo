@@ -33,6 +33,7 @@
         $display_image = $row['croimages'];
         $display_explained = $row['croexplained'];
         $display_link = $row['crolink'];
+        $display_name = $row['croname'];
     }
     $conn->close();
 /* random select fact button function */ 
@@ -65,7 +66,7 @@
             ">
 <!-- image area -->
                 <div class="col-md-6 imgholder">
-                    <img src="img/<?php echo $display_image; ?>" alt="">
+                    <img src="img/<?php echo $display_image; ?>" alt="<?php echo $display_name; ?>">
                     <p></p>
                 </div>
 <!-- explaination text area -->
