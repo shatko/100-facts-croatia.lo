@@ -102,6 +102,4 @@
         </div>
     </div>
 <!-- main container end -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
