@@ -62,42 +62,42 @@
 ?>
 <html>
 	<html lang="hr">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>insert</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
-<body>
-	<form action="submit.php" method="post" enctype="multipart/form-data">
-<!-- Insert the name of the fact -->
-		Name:		<input type="text" name="name" value="<?php if(isset($_POST['name'])) echo $_POST['name']; ?>" /> 
-					</br>
-<!-- Insert the explaination of the fact -->
-		Explained: 	<textarea name="explained" rows="10" cols="100"><?php if(isset($_POST['explained'])) echo $_POST['explained']; ?></textarea>
-					</br>
-<!-- Inserts the link for the want to know more area --> 
-		Link: 		<input type="text" name="link" value="<?php if(isset($_POST['link'])) echo $_POST['link']; ?>" />
-					</br>
-<!-- Insert image area -->
-		<input type="file" name="file" accept="image/*" />
-		</br>
-<!-- Submit button -->
-		<input type="submit" name="submit" value="submit">
-		</br></br>
-<!-- Display errors -->
-		<span class="displayerrors">
-			Alerts:</br>
-			<?php if(isset($errors['name1'])) echo $errors['name1']; ?></br>
-			<?php if(isset($errors['explained1'])) echo $errors['explained1']; ?></br>
-			<?php if(isset($errors['link1'])) echo $errors['link1']; ?></br>
-			<?php if(isset($errors['imagename1'])) echo $errors['imagename1']; ?></br>
-			<?php if(isset($errors['imagename2'])) echo $errors['imagename2']; ?></br>
-			<?php if(isset($noerrors['noerrors1'])) echo $noerrors['noerrors1']; ?></br>
-		</span>
-	</form>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>insert</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<form action="submit.php" method="post" enctype="multipart/form-data">
+	<!-- Insert the name of the fact -->
+			Name:		<input type="text" name="name" size="50" value="<?php if(isset($_POST['name'])) echo $_POST['name']; ?>" /> 
+						</br>
+	<!-- Insert the explaination of the fact -->
+			Explained: 	<textarea name="explained" rows="10" cols="100"><?php if(isset($_POST['explained'])) echo $_POST['explained']; ?></textarea>
+						</br>
+	<!-- Inserts the link for the want to know more area --> 
+			Link: 		<input type="text" name="link" size="50" value="<?php if(isset($_POST['link'])) echo $_POST['link']; ?>" />
+						</br>
+	<!-- Insert image area -->
+			<input type="file" name="file" accept="image/*" />
+			</br>
+	<!-- Submit button -->
+			<input type="submit" name="submit" value="submit">
+			</br></br>
+	<!-- Display errors -->
+			<span class="displayerrors">
+				Alerts:</br>
+				<?php if(isset($errors['name1'])) echo $errors['name1']; ?></br>
+				<?php if(isset($errors['explained1'])) echo $errors['explained1']; ?></br>
+				<?php if(isset($errors['link1'])) echo $errors['link1']; ?></br>
+				<?php if(isset($errors['imagename1'])) echo $errors['imagename1']; ?></br>
+				<?php if(isset($errors['imagename2'])) echo $errors['imagename2']; ?></br>
+				<?php if(isset($noerrors['noerrors1'])) echo $noerrors['noerrors1']; ?></br>
+			</span>
+		</form>
+	</body>
 </html>

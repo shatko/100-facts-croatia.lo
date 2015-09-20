@@ -34,6 +34,7 @@
 			if(isset($_POST['delete'])) {	
 				$DeleteQuery = "DELETE FROM crofacts WHERE croid='$_POST[hidden]'";
 				mysqli_query($conn, $DeleteQuery);
+				header("Refresh:0");
 			}
 
 		// border 
