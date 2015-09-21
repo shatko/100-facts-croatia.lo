@@ -8,6 +8,8 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link type="image/x-icon" rel="icon" href="favicon.png" />
+	<link type="image/x-icon" rel="shortcut icon" href="favicon.png" />
 </head>
 <body>
 	<table>
