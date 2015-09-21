@@ -1,7 +1,7 @@
 AuthType Basic
 AuthName "Admins only"
 # todo: change on deploy
-<FilesMatch "^(data|submit|edit).*$">
+<FilesMatch "^(data|submit|edit|datafun|submitfun|editfun).*$">
 AuthUserFile /home/mladen/Desktop/practice/100-facts-croatia.lo/.htpasswd
 AuthType basic
 Require valid-user
