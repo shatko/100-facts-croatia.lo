@@ -66,6 +66,6 @@
 			echo'</table>';
 		?>
 	</table>
-<a href="submit.php">New Fact</a>
+<a href="submitfun.php">New Fact</a>
 </body>
 </html>
