@@ -34,3 +34,5 @@
 [Mon Sep 21 10:14:14.143498 2015] [auth_basic:error] [pid 11028] [client 127.0.0.1:33453] AH01618: user  not found: /edit.php
 [Mon Sep 21 10:14:15.399541 2015] [auth_basic:error] [pid 11028] [client 127.0.0.1:33453] AH01618: user fas not found: /edit.php
 [Mon Sep 21 10:14:29.072445 2015] [:error] [pid 12113] [client 127.0.0.1:33454] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/mladen/Desktop/practice/100-facts-croatia.lo/edit.php on line 7
+[Mon Sep 21 11:32:08.602213 2015] [:error] [pid 11024] [client 127.0.0.1:34262] PHP Warning:  move_uploaded_file(imgfun/sudstvo_crofact_FE3B7.jpg): failed to open stream: Permission denied in /home/mladen/Desktop/practice/100-facts-croatia.lo/submitfun.php on line 38, referer: http://100-facts-croatia.lo/submitfun.php
+[Mon Sep 21 11:32:08.602261 2015] [:error] [pid 11024] [client 127.0.0.1:34262] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpDF6s4M' to 'imgfun/sudstvo_crofact_FE3B7.jpg' in /home/mladen/Desktop/practice/100-facts-croatia.lo/submitfun.php on line 38, referer: http://100-facts-croatia.lo/submitfun.php

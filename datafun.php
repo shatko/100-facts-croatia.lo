@@ -53,7 +53,7 @@
 				echo '<tr>';
 				echo '<td>'.$cell['croid'].'</td>';
 				echo '<td>'.$cell['croname']."</td>";
-				echo '<td><img src="img/'.$cell['croimages'].'" alt="" height="100px" width="100px"></td>';				
+				echo '<td><img src="imgfun/'.$cell['croimages'].'" alt="" height="100px" width="100px"></td>';				
 				echo '<td>'.$cell['croexplained'].'</td>';
 				echo '<td>'.$cell['crolink'].'</td>';
 				echo '<td>'.$cell['croimages'].'</td>';

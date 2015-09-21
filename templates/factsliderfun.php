@@ -79,7 +79,7 @@
             ">
 <!-- image area -->
                 <div class="col-md-6 imgholder">
-                    <img src="img/<?php echo $display_image; ?>" alt="<?php echo $display_name; ?>">
+                    <img src="imgfun/<?php echo $display_image; ?>" alt="<?php echo $display_name; ?>">
                     <p></p>
                 </div>
 <!-- explaination text area -->

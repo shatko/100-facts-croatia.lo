@@ -76,12 +76,12 @@
 	</script>
 </head>
 	<body>
-		<form action="edit.php?fact=<?php echo $display_factid;?>" method="post" enctype="multipart/form-data">
+		<form action="editfun.php?fact=<?php echo $display_factid;?>" method="post" enctype="multipart/form-data">
 			<div class="container">
 			    <div class="facts"> 
 		        	<div class="row">
 		        		<div class="col-md-6 imgholder">
-							<img src="img/<?php echo $display_image; ?>" alt="Smiley face" height="400px" width="550px">
+							<img src="imgfun/<?php echo $display_image; ?>" alt="<?php echo $display_name; ?>" height="400px" width="550px">
 						</div>
 						<div class="col-md-6">
 					 		<textarea id="factexplained" name="explained" rows="5" cols="50"><?php echo $display_explained; ?></textarea>

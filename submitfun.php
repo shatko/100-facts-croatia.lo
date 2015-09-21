@@ -20,8 +20,8 @@
 		$imagename=$_FILES['file']['name'];
 		$imagesize=$_FILES['file']['size'];
 		$imagetype=$_FILES['file']['type'];
-		$tmp_name = $_FILES['file']['tmp_name'];
-		$imagelocation = 'img/';
+		$tmp_name=$_FILES['file']['tmp_name'];
+		$imagelocation = 'imgfun/';
 /* checks for the image errors */
 		if (empty($imagename)) {
 			$errors['imagename1'] = "** Insert picture!";
