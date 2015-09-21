@@ -70,6 +70,19 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+		<script type="text/javascript">
+		tinymce.init({
+		    selector: "#factexplained",
+	        plugins: [
+	                "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+	                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+	                "table contextmenu directionality emoticons template textcolor paste fullpage textcolor colorpicker textpattern"
+	        ],
+
+	        toolbar1: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | insertdatetime preview | bold | forecolor backcolor",
+		});
+		</script>
 	</head>
 	<body>
 		<form action="submit.php" method="post" enctype="multipart/form-data">
@@ -77,7 +90,7 @@
 			Name:		<input type="text" name="name" size="50" value="<?php if(isset($_POST['name'])) echo $_POST['name']; ?>" /> 
 						</br>
 	<!-- Insert the explaination of the fact -->
-			Explained: 	<textarea name="explained" rows="10" cols="100"><?php if(isset($_POST['explained'])) echo $_POST['explained']; ?></textarea>
+			Explained: 	<textarea id="factexplained" name="explained" rows="10" cols="50"><?php if(isset($_POST['explained'])) echo $_POST['explained']; ?></textarea>
 						</br>
 	<!-- Inserts the link for the want to know more area --> 
 			Link: 		<input type="text" name="link" size="50" value="<?php if(isset($_POST['link'])) echo $_POST['link']; ?>" />
