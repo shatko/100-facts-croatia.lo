@@ -79,6 +79,9 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
+/* sets WP envirement to development */
+define('WP_ENV', 'development');
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
